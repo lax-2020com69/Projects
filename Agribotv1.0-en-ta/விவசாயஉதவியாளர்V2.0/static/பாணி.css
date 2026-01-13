@@ -1,0 +1,247 @@
+/* அடிப்படை ரீசெட் */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /*background: #f0f0f0;*/
+    /*background: #12c898;*/
+    /*background: linear-gradient(to right, #e0ffe0, #f0fff0);*/
+    /* பின்னணி படம் */
+    background-image: url("/static/images/Paddy-Cultivation-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* வரவேற்பு பகுதி */
+/*.welcome-section {
+    padding: 80px 20px 40px;
+    text-align: center;*/
+    /*background: #f5fff5;*/
+    /*background: #f5fff55a;
+    color: #2e7d32;*/
+    /*opacity: 0.7;*/
+/*    align-items: center;
+}*/
+
+.welcome-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* இடத்தை நடுப்பகுதியில் வைக்கிறது */
+    
+    background: rgba(245, 255, 245, 0.7); /* 0.7 மென்மையான பார்வை மாறுதல் */
+    padding: 60px 40px;
+    text-align: center;
+    color: #2e7d32;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.welcome-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.welcome-tips {
+    font-style: italic;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+/* நிலை திரும்பும் உரையாடல் பொத்தான் */
+.chat-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #4CAF50;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: background-color 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #45a049;
+}
+
+/* உரையாடல் விண்டோவின் தொகுதி */
+.chat-widget {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 360px;
+    height: 520px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* விண்டோ தலைப்பு */
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #e8f5e9;
+}
+
+/* விரைவான உதவி குறிப்பு பகுதி */
+.quick-tips {
+    font-size: 13px;
+    padding: 10px 15px;
+    background-color: #f0f8f0;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    font-style: italic;
+}
+
+/* உரையாடல் செய்திகளுக்கான பகுதி */
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* செய்தி தொகுப்பு */
+.message {
+    display: flex;
+    margin-bottom: 12px;
+    max-width: 90%;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* பாட்டின் செய்தி அமைப்பு */
+.message.bot {
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+/* பயனர் செய்தி அமைப்பு */
+.message.user {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+/* அவதார் வடிவமைப்பு */
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* பயனர் அவதார் நிறம் */
+.user .avatar {
+    background-color: #2196F3;
+}
+
+/* பாட்டின் அவதார் நிறம் */
+.bot .avatar {
+    background-color: #4CAF50;
+}
+
+/* செய்தி பேச்சுப் பபிள்கள் */
+.text {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #e0f7fa;
+    max-width: 220px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* பாட்டின் செய்தி பாணி */
+.bot .text {
+    background-color: #f1f8e9;
+}
+
+/* உள்ளீடு பகுதி */
+.input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    outline: none;
+    font-size: 14px;
+    background: #f0f0f0;
+}
+
+.input-area button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #45a049;
+}
+
+/* மென்மையான வெளிச்சம் தோன்றல் அனிமேஷன் */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
