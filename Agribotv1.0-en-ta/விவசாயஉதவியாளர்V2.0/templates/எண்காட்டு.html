@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <title>விவசாய உதவியாளர் – உங்கள் வேளாண்மை உதவியாளர்</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='பாணி.css') }}">
+  <style>
+    /* Any code here */
+  </style>
+</head>
+<body>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <!--h1>🌾 அக்ரி பாட்டு-க்கு வருக!</h1-->
+    <h1>🌾 விவசாய உதவியாளர்-க்கு வருக!</h1>
+    <p>
+      உங்கள் புத்திசாலி வேளாண்மை உதவியாளர். பயிர்கள், மண், பூச்சிகள், உரங்கள்,  
+      நீர் செலுத்துதல் மற்றும் பலவகை உதவிகளை உடனுக்குடன் பெறுங்கள். தொடங்க  
+      கீழே உள்ள உரையாடல் ஐகானை கிளிக் செய்யுங்கள்!
+    </p>
+    <div class="welcome-tips">💡 உதாரணம்: “குளிர்காலத்தில் எந்த பயிர்களை நடுவது?”</div>
+  </section>
+
+  <!-- Floating Chat Button -->
+  <div class="chat-button" onclick="toggleChatbox()">💬</div>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-header">
+      🌿 விவசாய உதவியாளர்
+      <span class="close-btn" onclick="toggleChatbox()">×</span>
+    </div>
+
+    <!-- Quick Help Tips -->
+    <div class="quick-tips">
+      💡 கேட்க முயற்சி செய்யுங்கள்: <em>“கடும்காலத்திற்கு சிறந்த பயிர்கள்?”</em> | <em>“தக்காளியில் பூச்சிகளை எப்படி குணப்படுத்துவது?”</em>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box" id="chat-box"></div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="எதையாவது கேளுங்கள்..." />
+      <button onclick="sendMessage()">அனுப்பு</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='எழுத்துமுறை.js') }}"></script>
+</body>
+</html>

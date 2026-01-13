@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil Keyboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .keyboard-button {
+      @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg shadow-sm transition duration-200;
+    }
+    .category-button {
+      @apply bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200;
+    }
+    .active-category {
+      @apply bg-blue-700 text-white;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-4">
+    <!-- Display Bar -->
+    <textarea
+      id="inputDisplay"
+      class="w-full h-24 p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+      placeholder="Type here..."
+    ></textarea>
+
+    <!-- Category Selection -->
+    <div class="flex justify-around mb-4 overflow-x-auto space-x-2">
+      <button class="category-button" onclick="showCategory('vowels')" title="உயிரெழுத்துகள்">உயிர்</button>
+      <button class="category-button" onclick="showCategory('consonants')" title="மெய்யெழுத்துகள்">மெய்</button>
+      <button class="category-button" onclick="showCategory('grantha')" title="கிரந்த எழுத்துகள்">கிரந்தம்</button>
+      <button class="category-button" onclick="showCategory('special')" title="சிறப்பு எழுத்துகள்">சிறப்பு</button>
+      <button class="category-button" onclick="showCategory('numbers')" title="எண்கள்">எண்</button>
+    </div>
+
+    <!-- Keyboard Layout -->
+    <div id="keyboard" class="grid grid-cols-6 gap-2"></div>
+
+    <!-- Control Buttons -->
+    <div class="flex justify-between mt-4">
+      <button
+        class="bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg"
+        onclick="clearInput()"
+      >
+        அழி
+      </button>
+      <button
+        class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg"
+        onclick="addSpace()"
+      >
+        இடைவெளி
+      </button>
+      <button
+        class="bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-2 px-4 rounded-lg"
+        onclick="deleteChar()"
+      >
+        நீக்கு
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const tamilChars = {
+      vowels: [
+        'அ', 'ஆ', 'இ', 'ஈ', 'உ', 'ஊ', 'எ', 'ஏ', 'ஐ', 'ஒ', 'ஓ', 'ஔ', 'ஃ'
+      ],
+      consonants: [
+        'க', 'ங', 'ச', 'ஞ', 'ட', 'ண', 'த', 'ந', 'ப', 'ம', 'ய', 'ர',
+        'ல', 'வ', 'ழ', 'ள', 'ற', 'ன'
+      ],
+      grantha: [
+        'ஜ', 'ஷ', 'ஸ', 'ஹ', 'க்ஷ', 'ஶ', 'ஶ்ரீ'
+      ],
+      special: [
+        'ா', 'ி', 'ீ', 'ு', 'ூ', 'ெ', 'ே', 'ை', 'ொ', 'ோ', 'ௌ', '்'
+      ],
+      numbers: [
+        '௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'
+      ]
+    };
+
+    const keyboard = document.getElementById('keyboard');
+    const inputDisplay = document.getElementById('inputDisplay');
+
+    function renderKeyboard(category) {
+      keyboard.innerHTML = '';
+      tamilChars[category].forEach(char => {
+        const button = document.createElement('button');
+        button.className = 'keyboard-button';
+        button.textContent = char;
+        button.onclick = () => addChar(char);
+        keyboard.appendChild(button);
+      });
+
+      // Update active category button
+      document.querySelectorAll('.category-button').forEach(btn => {
+        btn.classList.remove('active-category');
+        if (btn.textContent.toLowerCase().includes(category)) {
+          btn.classList.add('active-category');
+        }
+      });
+    }
+
+    function addChar(char) {
+      inputDisplay.value += char;
+      inputDisplay.scrollTop = inputDisplay.scrollHeight;
+    }
+
+    function addSpace() {
+      inputDisplay.value += ' ';
+      inputDisplay.scrollTop = inputDisplay.scrollHeight;
+    }
+
+    function deleteChar() {
+      inputDisplay.value = inputDisplay.value.slice(0, -1);
+      inputDisplay.scrollTop = inputDisplay.scrollHeight;
+    }
+
+    function clearInput() {
+      inputDisplay.value = '';
+    }
+
+    function showCategory(category) {
+      renderKeyboard(category);
+    }
+
+    // Initialize with vowels
+    renderKeyboard('vowels');
+  </script>
+</body>
+</html>
