@@ -1,0 +1,16 @@
+.form-container{
+    /* background-color: white; */
+    padding: 5px;
+    margin: 5px;
+}
+.form-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:25px;
+    margin-top: 15px;
+}
+.form-btn > div> Button{
+    padding: 10px;
+    border-radius:15px;
+}
