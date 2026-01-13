@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VS Code Clone with Dummy Terminal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm/css/xterm.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@latest/min/vs/loader.js"></script>
+</head>
+<body>
+  <div id="app" class="dark-theme">
+    <aside class="sidebar">
+      <h2>EXPLORER</h2>
+      <ul id="file-list">
+        <li data-file="index.html" class="active">index.html</li>
+        <li data-file="style.css">style.css</li>
+        <li data-file="main.js">main.js</li>
+      </ul>
+    </aside>
+
+    <main>
+      <header>
+        <div class="tabs">
+          <button class="tab active" data-file="index.html">index.html</button>
+          <button class="tab" data-file="style.css">style.css</button>
+          <button class="tab" data-file="main.js">main.js</button>
+        </div>
+        <div>
+          <button id="toggle-theme">🌙 Theme</button>
+          <button id="open-terminal">🖥️ Terminal</button>
+        </div>
+      </header>
+
+      <div id="editor"></div>
+      <div id="terminal-container"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
