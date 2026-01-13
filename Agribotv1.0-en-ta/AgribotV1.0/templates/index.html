@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgriBot – Your Agriculture Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    /* Any code here */
+  </style>
+</head>
+<body>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <h1>🌾 Welcome to AgriBot</h1>
+    <p>
+      Your smart agriculture assistant. Get instant help with crops, soil, pests, fertilizers,
+      irrigation and more. Just click the chat icon below to get started!
+    </p>
+    <div class="welcome-tips">💡 Example: “Which crops to grow in winter?”</div>
+  </section>
+
+  <!-- Floating Chat Button -->
+  <div class="chat-button" onclick="toggleChatbox()">💬</div>
+
+  <!-- Chat Widget -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-header">
+      🌿 AgriBot Assistant
+      <span class="close-btn" onclick="toggleChatbox()">×</span>
+    </div>
+
+    <!-- Quick Help Tips -->
+    <div class="quick-tips">
+      💡 Try asking: <em>"Best crops for summer?"</em> | <em>"How to treat pests in tomatoes?"</em>
+    </div>
+
+    <!-- Chat Box -->
+    <div class="chat-box" id="chat-box"></div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Ask something..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
