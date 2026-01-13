@@ -1,0 +1,330 @@
+/* === Basic resets and layout === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Dark Theme (default) === */
+body.dark-theme, #app.dark-theme {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+body.dark-theme .sidebar, #app.dark-theme .sidebar {
+  background: #252526;
+  color: #ccc;
+}
+
+body.dark-theme header, #app.dark-theme header {
+  background: #333;
+  color: white;
+}
+
+body.dark-theme .tab {
+  background: #2d2d2d;
+  color: #ccc;
+}
+
+body.dark-theme .tab.active {
+  background: #1e1e1e;
+  color: white;
+  border-bottom: 2px solid #007acc;
+}
+
+body.dark-theme #toggle-theme,
+body.dark-theme #open-terminal {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* Terminal container dark theme */
+body.dark-theme #terminal-container,
+#app.dark-theme #terminal-container {
+  background-color: #1e1e1e;
+  color: #ccc;
+  font-family: monospace;
+  font-size: 14px;
+  height: 250px;
+  padding: 10px;
+  overflow-y: auto;
+  border-top: 2px solid #007acc;
+  white-space: pre-wrap;
+  user-select: text;
+  line-height: 1.4;
+  caret-color: #0f0; /* green caret in dark mode */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+  position: fixed;
+  bottom: 0;
+  left: 220px; /* width of sidebar */
+  right: 0;
+  display: none; /* hidden by default */
+  z-index: 1000;
+}
+
+/* Terminal prompt color in dark mode */
+body.dark-theme .prompt {
+  color: #0f0;
+}
+
+/* === Light Theme === */
+body.light-theme, #app.light-theme {
+  background-color: #f3f3f3;
+  color: #222;
+}
+
+body.light-theme .sidebar, #app.light-theme .sidebar {
+  background: #fff;
+  color: #222;
+  border-right: 1px solid #ccc;
+}
+
+body.light-theme header, #app.light-theme header {
+  background: #e0e0e0;
+  color: #222;
+}
+
+body.light-theme .tab {
+  background: #ddd;
+  color: #222;
+}
+
+body.light-theme .tab.active {
+  background: #fff;
+  color: #007acc;
+  border-bottom: 2px solid #007acc;
+}
+
+body.light-theme #toggle-theme,
+body.light-theme #open-terminal {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* Terminal container light theme */
+body.light-theme #terminal-container,
+#app.light-theme #terminal-container {
+  background-color: #fff;
+  color: #222;
+  font-family: monospace;
+  font-size: 14px;
+  height: 250px;
+  padding: 10px;
+  overflow-y: auto;
+  border-top: 2px solid #007acc;
+  white-space: pre-wrap;
+  user-select: text;
+  line-height: 1.4;
+  caret-color: #007acc; /* blue caret in light mode */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 0;
+  left: 220px;
+  right: 0;
+  display: none;
+  z-index: 1000;
+}
+
+/* Terminal prompt color in light mode */
+body.light-theme .prompt {
+  color: #007acc;
+}
+
+/* === Common Styles === */
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 220px;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: inherit;
+  color: inherit;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  background-color: #007acc;
+  color: white;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* important for flex children */
+  overflow: hidden;
+  position: relative; /* for layering */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  flex-shrink: 0;
+  background-color: inherit;
+  color: inherit;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+  border: none;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  background: #2d2d2d;
+  color: #ccc;
+  user-select: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab.active {
+  background: #1e1e1e;
+  color: white;
+  border-bottom: 2px solid #007acc;
+}
+
+#editor {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  background-color: inherit;
+  color: inherit;
+  /* Add bottom padding so content is not hidden behind terminal overlay */
+  padding-bottom: 260px;
+}
+
+/* Buttons */
+#toggle-theme, #open-terminal {
+  border: none;
+  padding: 0.4rem 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* Terminal input and output lines */
+.input-line {
+  display: inline;
+  outline: none;
+  white-space: pre-wrap;
+  min-width: 10px;
+}
+
+.output-line {
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+}
+
+/* === Responsive Styles === */
+
+/* Small tablets and below */
+@media (max-width: 900px) {
+  #app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 150px;
+    order: 2;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 0.5rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .sidebar li {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+  }
+
+  main {
+    order: 1;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  header {
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+
+  .tabs {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  #editor {
+    height: 50vh;
+    padding-bottom: 260px; /* keep bottom padding */
+  }
+
+  #terminal-container {
+    height: 150px;
+    left: 0; /* full width on smaller screens */
+  }
+}
+
+/* Phones and very small devices */
+@media (max-width: 480px) {
+  #toggle-theme, #open-terminal {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
