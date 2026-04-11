@@ -1,0 +1,148 @@
+{
+  "foods": [
+    {
+      "name": "apple",
+      "dishes": ["Apple Pie", "Baked Apples", "Apple Crisp", "Apple Chutney", "Apple Cake"]
+    },
+    {
+      "name": "banana",
+      "dishes": ["Banana Bread", "Fried Bananas", "Banana Pancakes", "Bananas Foster", "Banana Cake"]
+    },
+    {
+      "name": "beetroot",
+      "dishes": ["Roasted Beetroot", "Beetroot Salad", "Borscht Soup", "Beetroot Hummus", "Beetroot Fritters"]
+    },
+    {
+      "name": "bell pepper",
+      "dishes": ["Stuffed Peppers", "Roasted Red Peppers", "Pepper Stir-fry", "Pepper Soup", "Pepper Salad"]
+    },
+    {
+      "name": "cabbage",
+      "dishes": ["Coleslaw", "Braised Cabbage", "Cabbage Rolls", "Cabbage Soup", "Fried Cabbage"]
+    },
+    {
+      "name": "capsicum",
+      "dishes": ["Capsicum Curry", "Roasted Capsicum", "Stuffed Capsicum", "Capsicum Pasta", "Capsicum Fritters"]
+    },
+    {
+      "name": "carrot",
+      "dishes": ["Glazed Carrots", "Carrot Cake", "Roasted Carrots", "Carrot Soup", "Carrot Salad"]
+    },
+    {
+      "name": "cauliflower",
+      "dishes": ["Roasted Cauliflower", "Cauliflower Rice", "Cauliflower Wings", "Cauliflower Soup", "Cauliflower Gratin"]
+    },
+    {
+      "name": "chilli pepper",
+      "dishes": ["Chili con Carne", "Spicy Salsa", "Chilli Oil", "Stuffed Chillies", "Chilli Jam"]
+    },
+    {
+      "name": "corn",
+      "dishes": ["Corn on the Cob", "Corn Chowder", "Corn Fritters", "Cornbread", "Creamed Corn"]
+    },
+    {
+      "name": "cucumber",
+      "dishes": ["Cucumber Salad", "Gazpacho", "Pickled Cucumbers", "Cucumber Sandwiches", "Cold Cucumber Soup"]
+    },
+    {
+      "name": "eggplant",
+      "dishes": ["Eggplant Parmesan", "Baba Ganoush", "Grilled Eggplant", "Eggplant Curry", "Moussaka"]
+    },
+    {
+      "name": "garlic",
+      "dishes": ["Garlic Bread", "Garlic Butter", "Roasted Garlic", "Garlic Mashed Potatoes", "Garlic Chicken"]
+    },
+    {
+      "name": "ginger",
+      "dishes": ["Ginger Tea", "Ginger Stir-fry", "Ginger Cake", "Ginger Snaps", "Ginger Chicken"]
+    },
+    {
+      "name": "grapes",
+      "dishes": ["Roasted Grapes", "Grape Jam", "Grape Tart", "Grape Salad", "Poached Grapes"]
+    },
+    {
+      "name": "jalepeno",
+      "dishes": ["Jalapeño Poppers", "Jalapeño Cheese Bread", "Jalapeño Salsa", "Stuffed Jalapeños", "Jalapeño Fries"]
+    },
+    {
+      "name": "kiwi",
+      "dishes": ["Kiwi Tart", "Baked Kiwi", "Kiwi Salad", "Kiwi Sorbet", "Kiwi Jam"]
+    },
+    {
+      "name": "lemon",
+      "dishes": ["Lemon Tart", "Lemon Cake", "Lemon Chicken", "Lemon Risotto", "Lemon Curd"]
+    },
+    {
+      "name": "lettuce",
+      "dishes": ["Caesar Salad", "Lettuce Wraps", "Wedge Salad", "Wilted Lettuce", "Lettuce Soup"]
+    },
+    {
+      "name": "mango",
+      "dishes": ["Mango Sticky Rice", "Mango Chutney", "Mango Sorbet", "Mango Curry", "Mango Cake"]
+    },
+    {
+      "name": "onion",
+      "dishes": ["French Onion Soup", "Caramelized Onions", "Onion Rings", "Onion Tart", "Roasted Onions"]
+    },
+    {
+      "name": "orange",
+      "dishes": ["Orange Cake", "Orange Chicken", "Orange Marmalade", "Orange Sorbet", "Candied Orange Peel"]
+    },
+    {
+      "name": "paprika",
+      "dishes": ["Paprika Chicken", "Goulash", "Paprika Potatoes", "Paprika Shrimp", "Paprika Sauce"]
+    },
+    {
+      "name": "pear",
+      "dishes": ["Poached Pears", "Pear Tart", "Pear Crisp", "Baked Pears", "Pear Salad"]
+    },
+    {
+      "name": "peas",
+      "dishes": ["Pea Soup", "Mushy Peas", "Pea Pesto", "Roasted Peas", "Pea Risotto"]
+    },
+    {
+      "name": "pineapple",
+      "dishes": ["Grilled Pineapple", "Pineapple Upside-down Cake", "Pineapple Fried Rice", "Pineapple Salsa", "Pineapple Tart"]
+    },
+    {
+      "name": "pomegranate",
+      "dishes": ["Pomegranate Salad", "Pomegranate Molasses", "Pomegranate Glaze", "Pomegranate Tart", "Pomegranate Juice Reduction"]
+    },
+    {
+      "name": "potato",
+      "dishes": ["Mashed Potatoes", "French Fries", "Baked Potato", "Potato Salad", "Roast Potatoes"]
+    },
+    {
+      "name": "raddish",
+      "dishes": ["Roasted Radishes", "Pickled Radishes", "Radish Salad", "Radish Fritters", "Sautéed Radishes"]
+    },
+    {
+      "name": "soy beans",
+      "dishes": ["Edamame", "Soy Milk", "Tofu", "Tempeh", "Soy Bean Stew"]
+    },
+    {
+      "name": "spinach",
+      "dishes": ["Sautéed Spinach", "Spinach Dip", "Spinach Tart", "Creamed Spinach", "Spinach Salad"]
+    },
+    {
+      "name": "sweetcorn",
+      "dishes": ["Corn Pancakes", "Corn Salad", "Corn Soup", "Corn Chowder", "Grilled Corn"]
+    },
+    {
+      "name": "sweetpotato",
+      "dishes": ["Roasted Sweet Potato", "Sweet Potato Fries", "Sweet Potato Mash", "Sweet Potato Pie", "Sweet Potato Curry"]
+    },
+    {
+      "name": "tomato",
+      "dishes": ["Tomato Soup", "Pasta Pomodoro", "Tomato Sauce", "Roasted Tomatoes", "Tomato Tart"]
+    },
+    {
+      "name": "turnip",
+      "dishes": ["Roasted Turnips", "Turnip Mash", "Turnip Soup", "Pickled Turnips", "Turnip Cakes"]
+    },
+    {
+      "name": "watermelon",
+      "dishes": ["Watermelon Salad", "Grilled Watermelon", "Watermelon Sorbet", "Watermelon Gazpacho", "Watermelon Tart"]
+    }
+  ]
+}

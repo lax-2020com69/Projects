@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit & Veggie Nutrition Predictor</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f4f7f6; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        #image-preview { max-width: 300px; display: none; margin: 20px auto; border-radius: 10px; }
+        .result-box { margin-top: 20px; display: none; text-align: left; padding: 15px; border: 1px solid #ddd; border-radius: 10px; background: #fafafa; }
+        .nutrition-list { list-style: none; padding: 0; }
+        .nutrition-list li { margin: 5px 0; padding: 5px; background: #eef; border-radius: 5px; }
+        /* Styling for dishes */
+        .dish-list li { background: #dff0d8; border-left: 5px solid #27ae60; }
+        .highlight { font-weight: bold; color: #2c3e50; }
+        button { background: #27ae60; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Nutrition & Recipe Predictor</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <br><br>
+    <button onclick="predictImage()">Predict Nutrition & Dishes</button>
+
+    <img id="image-preview" src="" alt="Preview">
+
+    <div id="result" class="result-box">
+        <h3>Prediction: <span id="pred-name" class="highlight"></span></h3>
+        <p>Confidence: <span id="pred-conf" class="highlight"></span></p>
+        <hr>
+        
+        <h4>Nutritional Value (per 100g):</h4>
+        <ul id="nutrition-details" class="nutrition-list"></ul>
+        
+        <hr>
+        <!-- NEW SECTION FOR DISHES -->
+        <h4>Suggested Dishes you can make:</h4>
+        <ul id="dish-details" class="nutrition-list dish-list"></ul>
+    </div>
+</div>
+
+<script>
+    async function predictImage() {
+        const input = document.getElementById('imageInput');
+        if (input.files.length === 0) {
+            alert("Please select an image first!");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', input.files[0]);
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            document.getElementById('image-preview').src = e.target.result;
+            document.getElementById('image-preview').style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+
+        const response = await fetch('/predict', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            alert(data.error);
+        } else {
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('pred-name').innerText = data.prediction;
+            document.getElementById('pred-conf').innerText = data.confidence;
+
+            // Display Nutrition
+            const nutritionList = document.getElementById('nutrition-details');
+            nutritionList.innerHTML = ""; 
+            if (data.nutrition) {
+                const n = data.nutrition.per_100g;
+                const details = [
+                    `Calories: ${n.calories} kcal`,
+                    `Protein: ${n.protein}`,
+                    `Carbohydrates: ${n.carbohydrates}`,
+                    `Fat: ${n.fat}`,
+                    `Fiber: ${n.fiber}`,
+                    `Key Vitamins: ${n.key_vitamins.join(", ")}`
+                ];
+                details.forEach(item => {
+                    let li = document.createElement('li');
+                    li.innerText = item;
+                    nutritionList.appendChild(li);
+                });
+            } else {
+                nutritionList.innerHTML = "<li>Nutrition data not found.</li>";
+            }
+
+            // --- NEW: Display Dishes ---
+            const dishList = document.getElementById('dish-details');
+            dishList.innerHTML = ""; // Clear previous
+            if (data.dishes && data.dishes.length > 0) {
+                data.dishes.forEach(dish => {
+                    let li = document.createElement('li');
+                    li.innerText = "🍳 " + dish;
+                    dishList.appendChild(li);
+                });
+            } else {
+                dishList.innerHTML = "<li>No suggested dishes found for this item.</li>";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

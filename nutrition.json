@@ -1,0 +1,436 @@
+{
+  "nutrition_data": [
+    {
+      "name": "apple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 52,
+        "protein": "0.3g",
+        "carbohydrates": "14g",
+        "fat": "0.2g",
+        "fiber": "2.4g",
+        "key_vitamins": ["Vitamin C", "Potassium"]
+      }
+    },
+    {
+      "name": "banana",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 89,
+        "protein": "1.1g",
+        "carbohydrates": "23g",
+        "fat": "0.3g",
+        "fiber": "2.6g",
+        "key_vitamins": ["Vitamin B6", "Potassium"]
+      }
+    },
+    {
+      "name": "beetroot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 43,
+        "protein": "1.6g",
+        "carbohydrates": "10g",
+        "fat": "0.2g",
+        "fiber": "2.8g",
+        "key_vitamins": ["Folate", "Manganese"]
+      }
+    },
+    {
+      "name": "bell pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein": "0.9g",
+        "carbohydrates": "4.6g",
+        "fat": "0.2g",
+        "fiber": "1.7g",
+        "key_vitamins": ["Vitamin C", "Vitamin A"]
+      }
+    },
+    {
+      "name": "cabbage",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein": "1.3g",
+        "carbohydrates": "5.8g",
+        "fat": "0.1g",
+        "fiber": "2.5g",
+        "key_vitamins": ["Vitamin K", "Vitamin C"]
+      }
+    },
+    {
+      "name": "capsicum",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 20,
+        "protein": "0.9g",
+        "carbohydrates": "4.6g",
+        "fat": "0.2g",
+        "fiber": "1.7g",
+        "key_vitamins": ["Vitamin C", "Vitamin A"]
+      }
+    },
+    {
+      "name": "carrot",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 41,
+        "protein": "0.9g",
+        "carbohydrates": "10g",
+        "fat": "0.2g",
+        "fiber": "2.8g",
+        "key_vitamins": ["Beta-carotene", "Vitamin A"]
+      }
+    },
+    {
+      "name": "cauliflower",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein": "1.9g",
+        "carbohydrates": "5g",
+        "fat": "0.3g",
+        "fiber": "2g",
+        "key_vitamins": ["Vitamin C", "Vitamin K"]
+      }
+    },
+    {
+      "name": "chilli pepper",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein": "1.9g",
+        "carbohydrates": "9g",
+        "fat": "0.4g",
+        "fiber": "1.5g",
+        "key_vitamins": ["Vitamin C", "Vitamin A"]
+      }
+    },
+    {
+      "name": "corn",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein": "3.2g",
+        "carbohydrates": "19g",
+        "fat": "1.3g",
+        "fiber": "2.4g",
+        "key_vitamins": ["Folate", "Lutein"]
+      }
+    },
+    {
+      "name": "cucumber",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein": "0.6g",
+        "carbohydrates": "3.6g",
+        "fat": "0.1g",
+        "fiber": "0.5g",
+        "key_vitamins": ["Vitamin K", "Potassium"]
+      }
+    },
+    {
+      "name": "eggplant",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 25,
+        "protein": "1g",
+        "carbohydrates": "6g",
+        "fat": "0.2g",
+        "fiber": "3g",
+        "key_vitamins": ["Manganese", "Folate"]
+      }
+    },
+    {
+      "name": "garlic",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 149,
+        "protein": "6.4g",
+        "carbohydrates": "33g",
+        "fat": "0.5g",
+        "fiber": "2.1g",
+        "key_vitamins": ["Manganese", "Vitamin B6"]
+      }
+    },
+    {
+      "name": "ginger",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 80,
+        "protein": "1.8g",
+        "carbohydrates": "18g",
+        "fat": "0.8g",
+        "fiber": "2g",
+        "key_vitamins": ["Gingerol", "Potassium"]
+      }
+    },
+    {
+      "name": "grapes",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 69,
+        "protein": "0.7g",
+        "carbohydrates": "18g",
+        "fat": "0.2g",
+        "fiber": "0.9g",
+        "key_vitamins": ["Vitamin K", "Vitamin C"]
+      }
+    },
+    {
+      "name": "jalepeno",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein": "1.2g",
+        "carbohydrates": "6g",
+        "fat": "0.3g",
+        "fiber": "1.8g",
+        "key_vitamins": ["Vitamin C", "Vitamin A"]
+      }
+    },
+    {
+      "name": "kiwi",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 61,
+        "protein": "1.1g",
+        "carbohydrates": "15g",
+        "fat": "0.5g",
+        "fiber": "3g",
+        "key_vitamins": ["Vitamin C", "Vitamin K"]
+      }
+    },
+    {
+      "name": "lemon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 29,
+        "protein": "1.1g",
+        "carbohydrates": "9g",
+        "fat": "0.3g",
+        "fiber": "2.8g",
+        "key_vitamins": ["Vitamin C", "Potassium"]
+      }
+    },
+    {
+      "name": "lettuce",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 15,
+        "protein": "1.4g",
+        "carbohydrates": "2.9g",
+        "fat": "0.2g",
+        "fiber": "1.3g",
+        "key_vitamins": ["Vitamin K", "Vitamin A"]
+      }
+    },
+    {
+      "name": "mango",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 60,
+        "protein": "0.8g",
+        "carbohydrates": "15g",
+        "fat": "0.4g",
+        "fiber": "1.6g",
+        "key_vitamins": ["Vitamin A", "Vitamin C"]
+      }
+    },
+    {
+      "name": "onion",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 40,
+        "protein": "1.1g",
+        "carbohydrates": "9.3g",
+        "fat": "0.1g",
+        "fiber": "1.7g",
+        "key_vitamins": ["Vitamin C", "Quercetin"]
+      }
+    },
+    {
+      "name": "orange",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 47,
+        "protein": "0.9g",
+        "carbohydrates": "12g",
+        "fat": "0.1g",
+        "fiber": "2.4g",
+        "key_vitamins": ["Vitamin C", "Folate"]
+      }
+    },
+    {
+      "name": "paprika",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein": "1.1g",
+        "carbohydrates": "6g",
+        "fat": "0.3g",
+        "fiber": "2g",
+        "key_vitamins": ["Vitamin A", "Vitamin C"]
+      }
+    },
+    {
+      "name": "pear",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 57,
+        "protein": "0.4g",
+        "carbohydrates": "15g",
+        "fat": "0.1g",
+        "fiber": "3.1g",
+        "key_vitamins": ["Vitamin C", "Potassium"]
+      }
+    },
+    {
+      "name": "peas",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 76,
+        "protein": "5.4g",
+        "carbohydrates": "14g",
+        "fat": "0.4g",
+        "fiber": "5.1g",
+        "key_vitamins": ["Vitamin K", "Vitamin A"]
+      }
+    },
+    {
+      "name": "pineapple",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 50,
+        "protein": "0.5g",
+        "carbohydrates": "13g",
+        "fat": "0.1g",
+        "fiber": "2.3g",
+        "key_vitamins": ["Vitamin C", "Manganese"]
+      }
+    },
+    {
+      "name": "pomegranate",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 83,
+        "protein": "1.7g",
+        "carbohydrates": "19g",
+        "fat": "1.1g",
+        "fiber": "4g",
+        "key_vitamins": ["Vitamin K", "Folate"]
+      }
+    },
+    {
+      "name": "potato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 77,
+        "protein": "2.1g",
+        "carbohydrates": "17g",
+        "fat": "0.1g",
+        "fiber": "2.2g",
+        "key_vitamins": ["Vitamin B6", "Potassium"]
+      }
+    },
+    {
+      "name": "raddish",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 16,
+        "protein": "0.7g",
+        "carbohydrates": "3.4g",
+        "fat": "0.1g",
+        "fiber": "1.6g",
+        "key_vitamins": ["Vitamin C", "Potassium"]
+      }
+    },
+    {
+      "name": "soy beans",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 173,
+        "protein": "16.6g",
+        "carbohydrates": "9.9g",
+        "fat": "9g",
+        "fiber": "6g",
+        "key_vitamins": ["Iron", "Calcium"]
+      }
+    },
+    {
+      "name": "spinach",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 23,
+        "protein": "2.9g",
+        "carbohydrates": "3.6g",
+        "fat": "0.4g",
+        "fiber": "2.2g",
+        "key_vitamins": ["Vitamin K", "Iron"]
+      }
+    },
+    {
+      "name": "sweetcorn",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein": "3.2g",
+        "carbohydrates": "19g",
+        "fat": "1.3g",
+        "fiber": "2.4g",
+        "key_vitamins": ["Folate", "Vitamin B1"]
+      }
+    },
+    {
+      "name": "sweetpotato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 86,
+        "protein": "1.6g",
+        "carbohydrates": "20g",
+        "fat": "0.1g",
+        "fiber": "3g",
+        "key_vitamins": ["Vitamin A", "Vitamin B6"]
+      }
+    },
+    {
+      "name": "tomato",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 18,
+        "protein": "0.9g",
+        "carbohydrates": "3.9g",
+        "fat": "0.2g",
+        "fiber": "1.2g",
+        "key_vitamins": ["Lycopene", "Vitamin C"]
+      }
+    },
+    {
+      "name": "turnip",
+      "category": "vegetable",
+      "per_100g": {
+        "calories": 28,
+        "protein": "1.5g",
+        "carbohydrates": "6g",
+        "fat": "0.1g",
+        "fiber": "1.8g",
+        "key_vitamins": ["Vitamin C", "Potassium"]
+      }
+    },
+    {
+      "name": "watermelon",
+      "category": "fruit",
+      "per_100g": {
+        "calories": 30,
+        "protein": "0.6g",
+        "carbohydrates": "7.6g",
+        "fat": "0.2g",
+        "fiber": "0.4g",
+        "key_vitamins": ["Vitamin A", "Vitamin C"]
+      }
+    }
+  ]
+}
