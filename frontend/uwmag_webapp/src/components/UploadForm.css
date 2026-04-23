@@ -1,0 +1,130 @@
+/* -------------------- Upload Form Styling -------------------- */
+
+.upload-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* -------------------- Custom File Input -------------------- */
+.file-input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Hide the actual browser file input */
+.custom-file-upload {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #f8fafc;
+  border: 2px dashed #cbd5e1; /* Dashed border for "upload area" feel */
+  color: #64748b;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Hide the default input field completely */
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload:hover {
+  background-color: #f1f5f9;
+  border-color: var(--primary-green);
+  color: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+/* -------------------- Image Preview Section -------------------- */
+.preview-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.preview-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.preview-image-container {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.image-preview {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-preview:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------- Upload Button -------------------- */
+.upload-button {
+  background: linear-gradient(to right, var(--primary-green), var(--dark-green)) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3) !important;
+  font-size: 1rem;
+}
+
+.upload-button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4) !important;
+}
+
+/* -------------------- Animations -------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+  .custom-file-upload {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
+  
+  .preview-image-container {
+    max-width: 200px;
+  }
+}

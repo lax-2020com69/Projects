@@ -1,0 +1,7 @@
+config.py
+
+uploads
+
+model/train/
+
+__pycache__

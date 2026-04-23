@@ -1,0 +1,13 @@
+fileroot.txt
+
+Report
+
+frontend/uwmag_webapp/node_modules
+
+backend/config.py
+
+backend/uploads
+
+backend/model/train/
+
+backend/__pycache__
